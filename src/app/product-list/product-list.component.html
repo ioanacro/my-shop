@@ -1,0 +1,36 @@
+<app-product-count [productList]="products">
+</app-product-count>
+
+<div>
+  I have a new name: {{name}}!
+</div>
+
+<ul>
+  <li *ngFor="let product of products">
+    <!-- <div *ngIf="product.inStock" [ngClass]="'in'">
+        {{product.productName}} : <img src="{{ product.imageUrl }}" class="sizedimage" />
+    </div>
+    <div *ngIf="!product.inStock" [ngClass]="'out'">
+        {{product.productName}} : <img src="{{ product.imageUrl }}" class="sizedimage" />
+    </div> -->
+
+    <div *ngIf="product.inStock;then content1 else content2" ></div>
+    <ng-template #content1>
+      <div [ngClass]="'in'">
+         <div [ngClass]="'listitem'">
+            {{product.productName}} :
+         </div>
+         <img src="{{ product.imageUrl }}" class="sizedimage" />
+      </div>
+    </ng-template>
+    <ng-template #content2>
+      <div [ngClass]="'out'">
+          <div [ngClass]="'listitem'">
+              {{product.productName}} :
+           </div>
+            <img src="{{ product.imageUrl }}" class="sizedimage" />
+      </div>
+    </ng-template>
+  </li>
+</ul>
+<!-- {{products[0] | json}} -->

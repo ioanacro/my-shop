@@ -1,0 +1,31 @@
+.listitem {
+  font-size: 30pt;
+  padding-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  list-style-position: inside;
+  margin-left: 37.5%;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  width: 30%;
+  background-color: rgb(55, 179, 30);
+}
+
+.stock {
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin: 8px 10px 0 0;
+  float: left;
+  border-radius: 50%;
+}
+
+.out {
+  width: 40%;
+  background-color: #c0392b;
+}
+
+.in {
+  width: 40%;
+  background-color: #2ecc71;
+}
